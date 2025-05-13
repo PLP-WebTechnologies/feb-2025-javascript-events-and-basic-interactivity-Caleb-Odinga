@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Event Playground</h1>
+        
+        <!-- Event Handling Section -->
+        <section class="event-section">
+            <h2>Event Handling </h2>
+            
+            <div class="event-box">
+                <button id="clickButton" class="interactive-button">Click Me!</button>
+                <p id="clickOutput">Button not clicked yet</p>
+            </div>
+            
+            <div class="event-box hover-box" id="hoverBox">
+                <p>Hover over me!</p>
+                <p id="hoverOutput">Waiting for hover...</p>
+            </div>
+            
+            <div class="event-box">
+                <input type="text" id="keypressInput" placeholder="Type something...">
+                <p id="keypressOutput">No keypress detected yet</p>
+            </div>
+            
+            <div class="event-box secret-box" id="secretBox">
+                <p>Double click or long press me for a secret!</p>
+            </div>
+        </section>
+        
+        <!-- Interactive Elements Section -->
+        <section class="interactive-section">
+            <h2>Interactive Elements 🎮</h2>
+            
+            <div class="interactive-box">
+                <button id="colorChanger" class="interactive-button">Change My Color!</button>
+            </div>
+            
+            <div class="gallery-container">
+                <h3>Image Gallery</h3>
+                <div class="gallery">
+                    <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Gallery image 1" class="gallery-img active">
+                    <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Gallery image 2" class="gallery-img">
+                    <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Gallery image 3" class="gallery-img">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prevBtn" class="gallery-btn">Previous</button>
+                    <button id="nextBtn" class="gallery-btn">Next</button>
+                </div>
+            </div>
+            
+            <div class="tabs-container">
+                <h3>Tab System</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                    <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content active" id="tab1">
+                    <p>This is content for Tab 1. JavaScript makes tabs interactive!</p>
+                </div>
+                <div class="tab-content" id="tab2">
+                    <p>Content for Tab 2 goes here. Tabs help organize information.</p>
+                </div>
+                <div class="tab-content" id="tab3">
+                    <p>Tab 3 content is the best content. Or is it?</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Form Validation Section -->
+        <section class="form-section">
+            <h2>Form Validation </h2>
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 chars):</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="passwordError"></span>
+                    <div class="password-rules">
+                        <p>Password must contain:</p>
+                        <ul>
+                            <li id="length-rule">At least 8 characters</li>
+                            <li id="number-rule">At least 1 number</li>
+                            <li id="special-rule">At least 1 special character</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
